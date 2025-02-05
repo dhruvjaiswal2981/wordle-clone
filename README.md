@@ -64,7 +64,7 @@
 4️⃣ Keep guessing until you win or run out of attempts!
 
 ## Preview of the Table
-    - ![Ui Preview 1](./public/ui-1.PNG)
+    - ![Ui Preview](./public/ui-1.PNG)
 
 ## Customization Guide
 
