@@ -63,7 +63,8 @@
     - ⬜ Gray = Letter not in the word
 - 4️⃣ Keep guessing until you win or run out of attempts!
 
-## Preview of the Table
+## Preview of the UI
+
 ![UI Preview](public/ui-1.PNG)
 
 ## Customization Guide
