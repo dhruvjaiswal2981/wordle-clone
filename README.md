@@ -4,11 +4,11 @@
 
 ## Features
 
-- ✔ Word Guessing Game – Players guess a word within a fixed number of attempts.
-- ✔ Color Indications – Correct letters in the right place turn green, correct letters in the wrong place turn yellow, and incorrect letters turn gray.
-- ✔ Dark Mode Support – Users can toggle between light and dark mode.
-- ✔ Responsive UI – Works seamlessly on desktop & mobile devices.
-- ✔ Custom Word List – Add your own words in words.js.
+✔ Word Guessing Game – Players guess a word within a fixed number of attempts.
+✔ Color Indications – Correct letters in the right place turn green, correct letters in the wrong place turn yellow, and incorrect letters turn gray.
+✔ Dark Mode Support – Users can toggle between light and dark mode.
+✔ Responsive UI – Works seamlessly on desktop & mobile devices.
+✔ Custom Word List – Add your own words in words.js.
 
 ## Folder Structure
 
@@ -55,16 +55,16 @@
 
 ## How to Play?
 
-1️⃣ Guess the hidden word within limited attempts.
-2️⃣ Press Enter after typing your guess.
-3️⃣ The tiles will change color:
-    🟩 Green = Correct letter & correct position
-    🟨 Yellow = Correct letter but wrong position
-    ⬜ Gray = Letter not in the word
-4️⃣ Keep guessing until you win or run out of attempts!
+- 1️⃣ Guess the hidden word within limited attempts.
+- 2️⃣ Press Enter after typing your guess.
+- 3️⃣ The tiles will change color:
+    - 🟩 Green = Correct letter & correct position
+    - 🟨 Yellow = Correct letter but wrong position
+    - ⬜ Gray = Letter not in the word
+- 4️⃣ Keep guessing until you win or run out of attempts!
 
 ## Preview of the Table
-    - ![Ui Preview](./public/ui-1.PNG)
+    - ![UI Preview](./public/ui-1.PNG)
 
 ## Customization Guide
 
