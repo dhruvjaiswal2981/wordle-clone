@@ -1,0 +1,242 @@
+/* 🌟 General Styles */
+:root {
+  --bg-light: #f8f9fa;
+  --bg-dark: #121212;
+  --text-light: #000;
+  --text-dark: #fff;
+  --tile-bg: #d3d6da;
+  --tile-correct: #6aaa64;
+  --tile-present: #c9b458;
+  --tile-absent: #787c7e;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* 🌙 Dark Mode */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.container {
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  padding: 15px;
+}
+
+/* 🎉 Winning/Losing Message */
+.message {
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 21px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.message.win {
+  color: white;
+  background-color: var(--tile-correct);
+}
+
+.message.lose {
+  color: white;
+  background-color: var(--tile-absent);
+}
+
+.message button {
+  margin-top: 8px;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  background: #2196f3;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.message button:hover {
+  background: #1769aa;
+}
+
+/* 🎭 Dark Mode Toggle */
+.toggle-mode {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  padding: 8px 14px;
+  font-weight: bold;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.toggle-mode:hover {
+  background: #555;
+}
+
+/* 🎯 Board & Rows */
+.board {
+  display: grid;
+  gap: 5px;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* 🔠 Tiles */
+.tile {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #d3d6da;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: white;
+  color: black;
+  transition: 0.2s ease;
+}
+
+.correct {
+  background-color: var(--tile-correct);
+  color: white;
+}
+
+.present {
+  background-color: var(--tile-present);
+  color: white;
+}
+
+.absent {
+  background-color: var(--tile-absent);
+  color: white;
+}
+
+/* ✨ Tile Animation */
+@keyframes flip {
+  0% { transform: rotateX(0deg); }
+  50% { transform: rotateX(90deg); }
+  100% { transform: rotateX(0deg); }
+}
+
+.tile.correct, .tile.present, .tile.absent {
+  animation: flip 0.5s ease-in-out;
+}
+
+/* 🎹 Keyboard */
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.key {
+  width: 40px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #d3d6da;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.key:hover {
+  background-color: #b0b3b8;
+  transform: scale(1.05);
+}
+
+.key.enter {
+  width: 80px;
+  background: #4caf50;
+  color: white;
+}
+
+.key.delete {
+  width: 80px;
+  background: #f44336;
+  color: white;
+}
+
+/* ✨ Keyboard Press Animation */
+.key:active {
+  transform: scale(0.9);
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+    max-width: 350px;
+  }
+
+  .tile {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .keyboard {
+    max-width: 100%;
+  }
+
+  .key {
+    width: 36px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .key.enter, .key.delete {
+    width: 70px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tile {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .keyboard {
+    gap: 3px;
+  }
+
+  .key {
+    width: 32px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .key.enter, .key.delete {
+    width: 65px;
+  }
+}
